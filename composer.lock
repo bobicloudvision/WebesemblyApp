@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72df3539451464d1459a31db80e5758b",
+    "content-hash": "9c491b8531eec05ba41a11d9276a5749",
     "packages": [
         {
             "name": "brick/math",
@@ -129,53 +129,6 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
-        },
-        {
-            "name": "cloudvision-apps/webesembly-editor",
-            "version": "0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CloudVisionApps/WebesemblyEditor.git",
-                "reference": "91e40a3ba149a11868f46d4b660e37c695eb3050"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/CloudVisionApps/WebesemblyEditor/zipball/91e40a3ba149a11868f46d4b660e37c695eb3050",
-                "reference": "91e40a3ba149a11868f46d4b660e37c695eb3050",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "WebesemblyEditor\\Providers\\WebesemblyEditorServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "WebesemblyEditor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Bozhidar Slaveykov",
-                    "email": "bobicloudvision@gmail.com"
-                }
-            ],
-            "description": "New generation of website building",
-            "support": {
-                "issues": "https://github.com/CloudVisionApps/WebesemblyEditor/issues",
-                "source": "https://github.com/CloudVisionApps/WebesemblyEditor/tree/0.0.2"
-            },
-            "time": "2023-09-13T15:17:13+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

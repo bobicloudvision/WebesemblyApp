@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700" rel="stylesheet">
 
-    @vite(['resources/css/theme.css'])
+    @vite(['resources/css/theme.scss'])
 
 </head>
 
 <body>
 
-<h1>
-    dd
-</h1>
+<div class="bg-red-500">
+    wow
+</div>
 
 <style>
     body {
