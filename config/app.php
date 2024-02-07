@@ -159,6 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \WebesemblyEditor\Providers\WebesemblyEditorServiceProvider::class,
 
         /*
          * Application Service Providers...
