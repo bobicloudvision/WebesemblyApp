@@ -24,19 +24,19 @@ Route::get('/', function () {
                 'name'=>'Main menu',
                 'items'=>[
                     [
-                        'title'=>'Home',
+                        'title'=>'Начало',
                         'url'=>'/'
                     ],
                     [
-                        'title'=>'About',
+                        'title'=>'Валути',
                         'url'=>'/about'
                     ],
                     [
-                        'title'=>'Services',
+                        'title'=>'Магазин',
                         'url'=>'/services'
                     ],
                     [
-                        'title'=>'Contact',
+                        'title'=>'Контакти',
                         'url'=>'/contact'
                     ]
                 ]
@@ -63,14 +63,16 @@ Route::get('/', function () {
             'action'=>[
                 [
                     'type'=>'button',
-                    'title'=>'Login',
-                    'url'=>'/login'
+                    'title'=>'Register',
+                    'url'=>'/register',
+                    'style'=>'secondary'
                 ],
                 [
                     'type'=>'button',
-                    'title'=>'Register',
-                    'url'=>'/register'
-                ],
+                    'title'=>'Login',
+                    'url'=>'/login',
+                    'style'=>'primary'
+                ]
             ]
         ],
         'footer'=>[
@@ -103,19 +105,25 @@ Route::get('/', function () {
                 'content'=>[
                     [
                         'type'=>'text',
-                        'value'=>'<h1>Welcome to my website</h1>',
+                        'value'=>'<h1>Изградете своето крипто портфолио</h1>',
                         'gridArea'=>'9 / 3 / 13 / 11'
                     ],
                     [
                         'type'=>'text',
-                        'value'=>'<p>We are a company that does things.</p>',
+                        'value'=>'<p>Възползвай се от най-добрите цени на пазара с избор от над 30+ криптовалути.</p>',
+                        'gridArea'=>'11 / 3 / 13 / 11'
+                    ],
+                    [
+                        'type'=>'text',
+                        'value'=>'<p>Обменяй криптовалутите си на най-добрите цени на Българския пазар...</p>',
                         'gridArea'=>'11 / 3 / 13 / 11'
                     ],
                     [
                         'type'=>'button',
-                        'value'=>'View Gallery',
+                        'value'=>'Регистрация',
                         'url'=>'/gallery',
-                        'gridArea'=>'13 / 3 / 16 / 6'
+                        'gridArea'=>'13 / 3 / 16 / 6',
+                        'style'=>'primary'
                     ]
                 ]
             ],

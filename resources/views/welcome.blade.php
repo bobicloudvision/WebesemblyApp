@@ -13,10 +13,6 @@
 
 <body>
 
-<div class="bg-red-500">
-    wow
-</div>
-
 <style>
     body {
         font-family: 'Montserrat', sans-serif;
@@ -29,14 +25,10 @@
     }
 </style>
 
-<h1 class="h-1">
-    test
-</h1>
-
 @if(isset($website['header']))
     <header>
         <nav>
-            <div class="max-w-5xl mx-auto px-2 sm:px-4 lg:px-8 my-6">
+            <div class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 my-6">
                 <div class="flex justify-between">
                     <div class="flex justify-between w-full px-2 lg:px-0">
                         <div class="flex-shrink-0 flex items-center">
@@ -46,7 +38,7 @@
                                         <img class="block lg:hidden h-8 w-auto" src="{{$website['header']['logo']['url']}}" alt="{{$website['header']['logo']['alt']}}">
                                         <img class="hidden lg:block h-8 w-auto" src="{{$website['header']['logo']['url']}}" alt="{{$website['header']['logo']['alt']}}">
                                     @else
-                                        <b class="font-bold text-white text-2xl"> {{$website['header']['logo']['alt']}}</b>
+                                        <b class="font-bold text-white text-3xl"> {{$website['header']['logo']['alt']}}</b>
                                     @endif
                                 </a>
                             @endif
@@ -65,7 +57,9 @@
                             <div class="flex gap-2 justify-center items-center" role="search">
                                 @foreach($website['header']['action'] as $action)
                                     @if($action['type'] == 'button')
-                                        <button class="bg-black/90 px-3 py-2 rounded text-white" type="submit">{{$action['title']}}</button>
+                                        <button class="btn-header-{{$action['style']}}" type="submit">
+                                            {{$action['title']}}
+                                        </button>
                                     @endif
                                 @endforeach
                             </div>
@@ -125,7 +119,7 @@
 
         <section
 
-            class="webesembly-section webesembly-section-{{$sectionId}}"
+            class="webesembly-section webesembly-section-{{$sectionId}} text-white"
 
             @if (isset($section['backgroundSettings']))
             style="
@@ -200,7 +194,7 @@
                                 </div>
                             @endif
                             @if($content['type'] == 'button')
-                                <button type="button" class="btn btn-dark">
+                                <button type="button" class="btn-{{$action['style']}}">
                                     {{$content['value']}}
                                 </button>
                             @endif

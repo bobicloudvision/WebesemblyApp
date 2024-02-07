@@ -2,15 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .btn-secondary {
+        @apply py-3 px-6 bg-white text-black font-semibold rounded-full hover:bg-gray-300 hover:text-black focus:outline-none focus:ring focus:ring-white focus:ring-opacity-5;
+    }
+    .btn-primary {
+        @apply py-3 px-6 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 focus:outline-none focus:ring focus:ring-white focus:ring-opacity-5;
+    }
+    .btn-header-secondary {
+        @apply py-3 px-6 bg-white text-black font-semibold rounded-full hover:bg-gray-300 hover:text-black focus:outline-none focus:ring focus:ring-white focus:ring-opacity-5;
+    }
+    .btn-header-primary {
+        @apply py-3 px-6 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 focus:outline-none focus:ring focus:ring-white focus:ring-opacity-5;
+    }
+}
+
 @layer base {
+    body {
+        @apply bg-black/90;
+    }
     h1 {
-        @apply text-2xl;
+        @apply text-6xl;
     }
     h2 {
-        @apply text-xl;
+        @apply text-3xl;
     }
     h3 {
-        @apply text-lg;
+        @apply text-2xl;
     }
     h4 {
         @apply text-base;

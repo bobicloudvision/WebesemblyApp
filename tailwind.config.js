@@ -1,17 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-  ],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue"
+    ],
+    safelist: [
+        'btn-primary',
+        'btn-secondary',
+        'btn-header-primary',
+        'btn-header-secondary',
+    ],
+    theme: {
+        extend: {},
+    },
+    variants: {},
+    plugins: [],
 }
