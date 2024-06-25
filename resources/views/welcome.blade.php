@@ -57,9 +57,7 @@
                             <div class="flex gap-2 justify-center items-center" role="search">
                                 @foreach($website['header']['action'] as $action)
                                     @if($action['type'] == 'button')
-                                        <button class="btn-header-{{$action['style']}}" type="submit">
-                                            {{$action['title']}}
-                                        </button>
+                                        @include('components.button', ['button' => $action])
                                     @endif
                                 @endforeach
                             </div>
@@ -121,7 +119,7 @@
 
             class="webesembly-section webesembly-section-{{$sectionId}} text-white"
 
-            @if (isset($section['backgroundSettings']))
+            @if (isset($section['backgroundSettings']) && !empty($section['backgroundSettings']))
             style="
                 background-image: url('{{$section['backgroundSettings']['image']}}');
                 background-size: cover;
@@ -132,14 +130,16 @@
             @endif
 
         >
+
+
             @if (isset($section['backgroundSettings']))
-                {{-- <div style="
+                <div style="
                  position: absolute;
                   z-index: 0; top: 0px; left: 0px;
                   width: 100%; height: 100%; opacity: 1;
                   pointer-events: none; mix-blend-mode: normal;
                   background-color: rgba(9,9,9,0.38);">
-                 </div>--}}
+                 </div>
             @endif
 
             @if(isset($section['content']))
@@ -189,14 +189,21 @@
                         @endphp
                         <div class="webesembly-flex-grid-block webesembly-flex-grid-block-{{$contentId}}-{{$sectionId}}">
                             @if($content['type'] == 'text')
+                               {{-- <div class="webesembly-editable">
+                                    <div class="webesembly-flex-grid-element-relative" style="z-index: 5; position: relative; height: 100%; pointer-events: auto;" >
+                                        <div class="webesembly-flex-grid-element-absolute" style="height: 100%; width: 100%; position: absolute; left: 0px; top: 0px;">
+                                            <div class="webesembly-flex-grid-element-content" style="height: 100%; width: 100%; display: flex; justify-content: start;">
+                                                <p>{!! $content['value'] !!}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>--}}
                                 <div class="webesembly-editable">
-                                    <p>{!! $content['value'] !!}</p>
+                                    {!! $content['value'] !!}
                                 </div>
                             @endif
                             @if($content['type'] == 'button')
-                                <button type="button" class="btn-{{$action['style']}}">
-                                    {{$content['value']}}
-                                </button>
+                                @include('components.button', ['button' => $content])
                             @endif
                         </div>
                     @endforeach
